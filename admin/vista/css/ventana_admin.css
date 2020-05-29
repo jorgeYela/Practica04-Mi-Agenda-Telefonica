@@ -1,0 +1,98 @@
+* {
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+* #contenedor {  
+    background: black;
+}
+* #cabecera {
+    background: blue;
+    height: 7%;
+}
+* #menu {
+    float: left;
+    width: 15%;
+    height: 85%;
+    background: cadetblue;
+}
+* #contenido {
+    float: left;
+    width: 85%;
+    height: 85%;
+    background: chartreuse;
+}
+* #pie {
+    height: 10%;
+    clear: both;
+    background: crimson;
+} 
+
+
+#menu #fotoAdmin {
+    margin: 5%;
+    background: darkgrey;
+    width: 90%;
+    height: 20%;
+}
+
+#menu #margen {
+    margin: 5%;
+    width: 90%;
+    height: auto;
+    text-align: center;
+}
+
+
+#contenido #margenCF1 {
+    margin: 2%;
+    width: 10%;
+    height: auto;
+    text-align: center;
+    background: beige;
+}
+
+#contenido #margenCF2 {
+    margin: 2%;
+    width: 10%;
+    height: auto;
+    text-align: center;
+    background: blue;
+}
+
+#contenido #margenCF3 {
+    margin: 2%;
+    width: 10%;
+    height: auto;
+    text-align: center;
+    background: blueviolet;
+}
+#contenido #margenCF4 {
+    margin: 2%;
+    width: 10%;
+    height: auto;
+    text-align: center;
+    background: brown;
+}
+#contenido #margenCF5 {
+    margin: 2%;
+    width: 10%;
+    height: auto;
+    text-align: center;
+    background: darkgreen;
+}
+#contenido #margenCF6 {
+    margin: 2%;
+    width: 10%;
+    height: auto;
+    text-align: center;
+    background: darkgray;
+}
+#contenido #margenCF7 {
+    margin: 2%;
+    width: 10%;
+    height: auto;
+    text-align: center;
+    background: cornflowerblue;
+}
