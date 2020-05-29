@@ -14,3 +14,12 @@ function buscar_datos(consulta) {
         console.log("error");
     })
 }
+
+$(document).on('keyup', '#txtBusqueda', function(){
+    var valor = $(this).val();
+    if(valor != "") {
+        buscar_datos(valor);
+    } else {
+        buscar_datos();
+    }
+});
