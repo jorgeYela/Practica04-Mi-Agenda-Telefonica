@@ -1,3 +1,4 @@
+$(buscar_datos());
 
 function buscar_datos(consulta) {
     $.ajax({
@@ -7,7 +8,7 @@ function buscar_datos(consulta) {
         data: {consulta: consulta},
     })
     .done(function(respuesta){
-        $("#datos").html(respuesta);
+        $("#contenedor4").html(respuesta);
     })
     .fail(function(){
         console.log("error");
