@@ -8,6 +8,7 @@ h3{
     text-transform: uppercase;
     color: black;
 }
+/*Posicionamiento de Videos, Imagenes y Cajas*/
 #piePaginaUser{
     color: white;
 }
@@ -20,6 +21,7 @@ h3{
 #contenedorImgCP{
     margin-left: 250px;
 }
+/*Diseño Tablas*/
 #tabla-contenedor{
     width: 600px;
 }
@@ -62,22 +64,6 @@ th, td{
     width: 150px;
     margin-top: 35px;
     margin-left: 10px;
-    margin: 50px;
-}
-#user{
-    float: left;
-    padding: 20px;
-    width: 150px;
-}
-#mensajeria{
-    float: left;
-    padding: 20px;
-    width: 150px;
-}
-#more{
-    float: left;
-    padding: 20px;
-    width: 150px;
 }
 h1, h2{
     text-align: center;
@@ -163,10 +149,6 @@ h1, h2{
 }
 #imgAvatarHombre1, #imgAvatarHombre2{
     margin-left: 730px;
-    margin-left: 760px;
-}
-#imgAvatarHombre1, #imgAvatarHombre2{
-    margin-left: 760px;
 }
 #descripcionAvatar10, #descripcionAvatar2, #descripcionAvatar3, #descripcionAvatar4{
     font-family: Arial, Helvetica, sans-serif;
