@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/ventana_admin.css" type="text/css" />
+    <script src="../JS/ventana_admin.js"></script>
+    <title>Admin</title>
+</head>
+
+<body id="contenedor"> 
+    <section id="cabecera">
+        <p>LOGO</p>
+    </section>
+  
+    <section id="menu">
+        <div id="fotoAdmin">
+            <p>LOGO</p>
+        </div>
+        <div id="margen">
+            <p>NOMBRE ADMIN</p>
+        </div>
+
+        <div id="margen">
+            <input type="submit" id="botones" name="agregarA" value="Agregar Administrador" onclick="aparecer1()"/>
+            <input type="submit" id="botones" name="agregarU" value="Agregar Usuario" onclick="aparecer2()"/>
+            <input type="submit" id="botones" name="eliminar" value="Eliminar Usuario/Admin" onclick="aparecer3()"/>
+            <input type="submit" id="botones" name="modificar" value="Modificar Usuario/Admin" onclick="aparecer4()"/>
+            <input type="submit" id="botones" name="buscar" value="Buscar Usuario" onclick="aparecer5()"/>
+            <input type="submit" id="botones" name="listar" value="Listar Usuarios" onclick="aparecer6()"/>
+            <input type="submit" id="botones" name="cambiarContrasena" value="Recuperar Contrasena" onclick="aparecer7()"/>
+        </div>
+
+    </section>
+  
+    <section id="contenido">
+        <!--AGREGAR USUARIO ADMINISTRADOR-->
+        <div id="margenCF1">
+            <?php
+                //incluir conexión a la base de datos
+                include '../../config/conexioBD.php'; 
+                $cedula =  isset($_POST["Acedula"]) ? trim($_POST["Acedula"]) : null;
+                $nombres = isset($_POST["Anombre"]) ? mb_strtoupper(trim($_POST["Anombre"]), 'UTF-8') : null;
+                $apellidos = isset($_POST["Aapellido"]) ? mb_strtoupper(trim($_POST["Aapellido"]), 'UTF-8') : null;
+                $direccion = isset($_POST["Adireccion"]) ? mb_strtoupper(trim($_POST["Adireccion"]), 'UTF-8') : null;
+                $correo = isset($_POST["Acorreo"]) ? trim($_POST["Acorreo"]): null;
+                $contrasena = isset($_POST["Apsw"]) ? trim($_POST["Apsw"]) : null;
+
+                $sql = "INSERT INTO usuario VALUES (0, '$cedula', '$nombres', '$apellidos', '$direccion',
+                '$correo', MD5('$contrasena'), 'A')"; 
+
+                if ($conn->query($sql) === TRUE) {
+                    //echo "<p>Se ha creado los datos personales correctamemte!!!</p>";
+                    echo '<script language="javascript">alert("Administrador Creado Exitosamente")"</>';
+                } else {
+                if($conn->errno == 1062){
+                    //echo "<p class='error'>La persona con la cedula $cedula ya esta registrada en el sistema </p>";
+                }else{
+                    echo "<p class='error'>Error: " . mysqli_error($conn) . "</p>";
+                    }
+                }
+            
+
+                //Cerrar BD
+                //cerrar la base de datos
+                $conn->close();
+            ?>
+
+            <form  class="formulario" name="formulario_registro" method="POST" action = "/Practica04-Mi-Agenda-Telefonica/admin/controladores/crear_admin.php">
+                <input class="controles" type="text" name="Acedula" id="n1" placeholder="Ingrese su Cedula" onkeyup="validarCedula()">
+                <span id="mensajeCedula" ></span><br>
+    
+                <input class="controles" type="text" name="Anombre" id="n1" placeholder="Ingrese su Nombre" onkeyup="validarNombre()">
+                <span id="mensajenombre" ></span><br>
+    
+                <input class="controles" type="text" name="Aapellido" id="n1" placeholder="Ingrese su Apellidos" onkeyup="validarApellido()">
+                <span id="mensajeapellido" ></span><br>
+    
+                <input class="controles" type="text" name="Adireccion" id="n2" placeholder="Ingrese su Direccion" >
+    
+                <input class="controles" type="text" name="Acorreo" id="n1" placeholder="Ingrese su Correo" onkeyup="validarCorreo()">
+                <span id="mensajecorreo" ></span><br>
+    
+                <input class="controles" type="password" name="Apsw" id="n1" placeholder="Ingrese su Contrasena" onkeyup="validarContrasena()">
+                <span id="mensajepsw" ></span><br>
+    
+                <p>Estoy de acuerdo con <a href="#">Terminos y condiciones</a></p>
+                <input class="botones" type="submit" value="Registrar" onclick="validarCampos()">
+            </form>
+        </div>
+        <!--AGREGAR USUARIO NORMAL-->
+        <div id="margenCF2" style="display: none;">
+            <form class="formulario" name="formulario_registro" method="POST" action="/Practica04-Mi-Agenda-Telefonica/admin/controladores/cread_user.php">
+                <input class="controles" type="text" name="Ucedula" id="n1" placeholder="Ingrese# su Cedula" onkeyup="validarCedula()">
+                <span id="mensajeCedula" ></span><br>
+    
+                <input class="controles" type="text" name="Unombre" id="n1" placeholder="Ingrese su Nombre" onkeyup="validarNombre()">
+                <span id="mensajenombre" ></span><br>
+    
+                <input class="controles" type="text" name="Uapellido" id="n1" placeholder="Ingrese su Apellidos" onkeyup="validarApellido()">
+                <span id="mensajeapellido" ></span><br>
+    
+                <input class="controles" type="text" name="Udireccion" id="n2" placeholder="Ingrese su Direccion" >
+    
+                <input class="controles" type="text" name="Ucorreo" id="n1" placeholder="Ingrese su Correo" onkeyup="validarCorreo()">
+                <span id="mensajecorreo" ></span><br>
+    
+                <input class="controles" type="password" name="Upsw" id="n1" placeholder="Ingrese su Contrasena" onkeyup="validarContrasena()">
+                <span id="mensajepsw" ></span><br>
+    
+                <p>Estoy de acuerdo con <a href="#">Terminos y condiciones</a></p>
+                <input class="botones" type="submit" value="Registrar" onclick="validarCampos()">
+            </form>
+        </div>
+
+        <!--ELIMINAR USUARIO O ADMINISTRADOR-->
+        <div id="margenCF3" style="display: none;">
+            <form class="formulario" name="formulario_registro" method="POST" action="/Practica04-Mi-Agenda-Telefonica/admin/controladores/cread_user.php">
+                <input class="controles" type="text" name="Ucedula" id="n1" placeholder="Ingrese# su Cedula" onkeyup="validarCedula()">
+                <span id="mensajeCedula" ></span><br>
+    
+                <input class="controles" type="text" name="Unombre" id="n1" placeholder="Ingrese su Nombre" onkeyup="validarNombre()">
+                <span id="mensajenombre" ></span><br>
+    
+                <input class="controles" type="text" name="Uapellido" id="n1" placeholder="Ingrese su Apellidos" onkeyup="validarApellido()">
+                <span id="mensajeapellido" ></span><br>
+    
+                <input class="controles" type="text" name="Udireccion" id="n2" placeholder="Ingrese su Direccion" >
+    
+                <input class="controles" type="text" name="Ucorreo" id="n1" placeholder="Ingrese su Correo" onkeyup="validarCorreo()">
+                <span id="mensajecorreo" ></span><br>
+    
+                <input class="controles" type="password" name="Upsw" id="n1" placeholder="Ingrese su Contrasena" onkeyup="validarContrasena()">
+                <span id="mensajepsw" ></span><br>
+    
+                <p>Estoy de acuerdo con <a href="#">Terminos y condiciones</a></p>
+                <input class="botones" type="submit" value="Registrar" onclick="validarCampos()">
+            </form>
+        </div>
+    </section>
+  
+    <footer id="pie">
+        <P>PARTE DE PIE DE PAGINA</P>
+    </footer>
+
+    
+</body>
+</html>
