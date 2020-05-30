@@ -7,8 +7,9 @@
 
     if(isset($_POST['consulta'])) {
         $q = $conn->real_escape_string($_POST['consulta']);
-        $query = "SELECT usu_codigo, usu_cedula, usu_nombres, usu_apellidos, usu_direccion, usu_correo FROM usuario
-        WHERE usu_nombres LIKE '%" .$q. "%' OR usu_cedula LIKE '%" .$q. "%'";
+        $query = "SELECT usuario.usu_codigo, usuario.usu_cedula, usuario.usu_nombres, usuario.usu_apellidos, usuario.usu_direccion, usuario.usu_correo, telefono.tel_numero
+                  FROM usuario, telefono
+                  WHERE telefono.tel_fk_usuario = usuario.usu_codigo AND usu_nombres LIKE '%" .$q. "%' OR usu_cedula LIKE '%" .$q. "%'";
     }
 
     $resultado = $conn->query($query);
