@@ -85,28 +85,10 @@
 
         <!--ELIMINAR USUARIO O ADMINISTRADOR-->
         <div id="margenCF3" style="display: none;">
-            
-
-            <form class="formulario" name="formulario_registro" method="POST" action="/Practica04-Mi-Agenda-Telefonica/admin/controladores/cread_user.php">
-                <input class="controles" type="text" name="Ucedula" id="n1" placeholder="Ingrese# su Cedula" onkeyup="validarCedula()">
+            <form class="formulario" name="formulario_registro" method="POST" action="/Practica04-Mi-Agenda-Telefonica/admin/controladores/EliminarUsuarioAdmin.php">
+                <input class="controles" type="text" name="Ecedula" id="n1" placeholder="Ingrese# su Cedula" onkeyup="validarCedula()">
                 <span id="mensajeCedula" ></span><br>
-    
-                <input class="controles" type="text" name="Unombre" id="n1" placeholder="Ingrese su Nombre" onkeyup="validarNombre()">
-                <span id="mensajenombre" ></span><br>
-    
-                <input class="controles" type="text" name="Uapellido" id="n1" placeholder="Ingrese su Apellidos" onkeyup="validarApellido()">
-                <span id="mensajeapellido" ></span><br>
-    
-                <input class="controles" type="text" name="Udireccion" id="n2" placeholder="Ingrese su Direccion" >
-    
-                <input class="controles" type="text" name="Ucorreo" id="n1" placeholder="Ingrese su Correo" onkeyup="validarCorreo()">
-                <span id="mensajecorreo" ></span><br>
-    
-                <input class="controles" type="password" name="Upsw" id="n1" placeholder="Ingrese su Contrasena" onkeyup="validarContrasena()">
-                <span id="mensajepsw" ></span><br>
-    
-                <p>Estoy de acuerdo con <a href="#">Terminos y condiciones</a></p>
-                <input class="botones" type="submit" value="Registrar" onclick="validarCampos()">
+                <input class="botones" type="submit" value="Eliminar" onclick="validarCampos()">
             </form>
         </div>
     </section>
@@ -114,7 +96,7 @@
     <footer id="pie">
         <P>PARTE DE PIE DE PAGINA</P>
     </footer>
-
+    
     
 </body>
 </html>
