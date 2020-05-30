@@ -3,6 +3,7 @@ var aparecer1 = function(){
     desaparecer2();
     desaparecer3();
     desaparecer4();
+    desaparecer5();
 }
 
 var aparecer2 = function(){
@@ -10,6 +11,7 @@ var aparecer2 = function(){
     desaparecer1();
     desaparecer3();
     desaparecer4();
+    desaparecer5();
 }
 
 var aparecer3 = function(){
@@ -17,6 +19,7 @@ var aparecer3 = function(){
     desaparecer1();
     desaparecer2();
     desaparecer4();
+    desaparecer5();
 }
 
 var aparecer4 = function(){
@@ -24,6 +27,15 @@ var aparecer4 = function(){
     desaparecer1();
     desaparecer2();
     desaparecer3();
+    desaparecer5();
+}
+
+var aparecer5 =  function(){
+    document.getElementById("margenCF5").style.display ="block";
+    desaparecer1();
+    desaparecer2();
+    desaparecer3();
+    desaparecer4();
 }
 
 var desaparecer1 = function(){
@@ -43,5 +55,10 @@ var desaparecer3 = function(){
 
 var desaparecer4 = function(){
     document.getElementById("margenCF4").style.display ="none"; 
+    
+}
+
+var desaparecer5 = function(){
+    document.getElementById("margenCF5").style.display ="none"; 
     
 }
