@@ -26,5 +26,5 @@
     //Cerrar BD
     //cerrar la base de datos
     $conn->close();
-    echo '<script language="javascript">alert("Administrador Creado Exitosamente"); window.location.href="../../admin/vista/html/ventana_admin.html"</script>';
+    echo '<script language="javascript">alert("Administrador Creado Exitosamente"); window.location.href="../../admin/vista/html/ventana_admin.php"</script>';
 ?>
