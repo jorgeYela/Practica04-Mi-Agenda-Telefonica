@@ -1,27 +1,32 @@
 var aparecer1 = function(){
     document.getElementById("margenCF1").style.display ="block"; 
+    desaparecer2();
+    desaparecer3();
 }
 
 var aparecer2 = function(){
     document.getElementById("margenCF2").style.display ="block"; 
+    desaparecer1();
+    desaparecer3();
 }
 
 var aparecer3 = function(){
-    document.getElementById("margenCF3").style.display ="block"; 
+    document.getElementById("margenCF3").style.display ="block";
+    desaparecer1();
+    desaparecer2();
 }
 
-var aparecer4 = function(){
-    document.getElementById("margenCF4").style.display ="block"; 
+var desaparecer1 = function(){
+    document.getElementById("margenCF1").style.display ="none"; 
+    
 }
 
-var aparecer5 = function(){
-    document.getElementById("margenCF5").style.display ="block"; 
+var desaparecer2 = function(){
+    document.getElementById("margenCF2").style.display ="none"; 
+    
 }
 
-var aparecer6 = function(){
-    document.getElementById("margenCF6").style.display ="block"; 
-}
-
-var aparecer7 = function(){
-    document.getElementById("margenCF7").style.display ="block"; 
+var desaparecer3 = function(){
+    document.getElementById("margenCF3").style.display ="none"; 
+    
 }
