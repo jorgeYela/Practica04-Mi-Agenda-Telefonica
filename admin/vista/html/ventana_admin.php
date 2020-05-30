@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/ventana_admin.css" type="text/css" />
     <script src="../JS/ventana_admin.js"></script>
+    <link rel="stylesheet" href="/Practica04-Mi-Agenda-Telefonica/admin/vista/css/formulario.css">
     <title>Admin</title>
 </head>
 
@@ -47,68 +48,70 @@
                 <span id="mensajeapellido" ></span><br>
     
                 <input class="controles" type="text" name="Adireccion" id="n2" placeholder="Ingrese su Direccion" >
-    
+                <span id="m" ></span><br>
+
                 <input class="controles" type="text" name="Acorreo" id="n1" placeholder="Ingrese su Correo" onkeyup="validarCorreo()">
                 <span id="mensajecorreo" ></span><br>
     
                 <input class="controles" type="password" name="Apsw" id="n1" placeholder="Ingrese su Contrasena" onkeyup="validarContrasena()">
                 <span id="mensajepsw" ></span><br>
     
-                <p>Estoy de acuerdo con <a href="#">Terminos y condiciones</a></p>
                 <input class="botones" type="submit" value="Registrar" onclick="validarCampos()">
             </form>
         </div>
         <!--AGREGAR USUARIO NORMAL-->
         <div id="margenCF2" style="display: none;">
-            <form class="formulario" name="formulario_registro2" method="POST" action="/Practica04-Mi-Agenda-Telefonica/admin/controladores/cread_user.php">
-                <input class="controles" type="text" name="Ucedula" id="n11" placeholder="Ingrese# su Cedula" onkeyup="validarCedula()">
+            <form class="formulario2" name="formulario_registro2" method="POST" action="/Practica04-Mi-Agenda-Telefonica/admin/controladores/cread_user.php">
+                <input class="controles2" type="text" name="Ucedula" id="n11" placeholder="Ingrese# su Cedula" onkeyup="validarCedula()">
                 <span id="mensajeCedula" ></span><br>
     
-                <input class="controles" type="text" name="Unombre" id="n12" placeholder="Ingrese su Nombre" onkeyup="validarNombre()">
+                <input class="controles2" type="text" name="Unombre" id="n12" placeholder="Ingrese su Nombre" onkeyup="validarNombre()">
                 <span id="mensajenombre" ></span><br>
     
-                <input class="controles" type="text" name="Uapellido" id="n13" placeholder="Ingrese su Apellidos" onkeyup="validarApellido()">
+                <input class="controles2" type="text" name="Uapellido" id="n13" placeholder="Ingrese su Apellidos" onkeyup="validarApellido()">
                 <span id="mensajeapellido" ></span><br>
     
-                <input class="controles" type="text" name="Udireccion" id="n24" placeholder="Ingrese su Direccion" >
+                <input class="controles2" type="text" name="Udireccion" id="n24" placeholder="Ingrese su Direccion" >
+                <span id="m" ></span><br>
     
-                <input class="controles" type="text" name="Ucorreo" id="n51" placeholder="Ingrese su Correo" onkeyup="validarCorreo()">
+                <input class="controles2" type="text" name="Ucorreo" id="n51" placeholder="Ingrese su Correo" onkeyup="validarCorreo()">
                 <span id="mensajecorreo" ></span><br>
     
-                <input class="controles" type="password" name="Upsw" id="n16" placeholder="Ingrese su Contrasena" onkeyup="validarContrasena()">
+                <input class="controles2" type="password" name="Upsw" id="n16" placeholder="Ingrese su Contrasena" onkeyup="validarContrasena()">
                 <span id="mensajepsw" ></span><br>
     
-                <p>Estoy de acuerdo con <a href="#">Terminos y condiciones</a></p>
-                <input class="botones" type="submit" value="Registrar" onclick="validarCampos()">
+                <input class="botones2"  type="submit" value="Registrar" onclick="validarCampos()">
             </form>
         </div>
 
         <!--ELIMINAR USUARIO O ADMINISTRADOR-->
         <div id="margenCF3" style="display: none;">
-            <form class="formulario" name="formulario_registro3" method="POST" action="/Practica04-Mi-Agenda-Telefonica/admin/controladores/EliminarUsuarioAdmin.php">
-                <input class="controles" type="text" name="Ecedula" id="n172" placeholder="Ingrese# su Cedula" onkeyup="validarCedula()">
+            <form class="formulario3" name="formulario_registro3" method="POST" action="/Practica04-Mi-Agenda-Telefonica/admin/controladores/EliminarUsuarioAdmin.php">
+                <input class="controles3" type="text" name="Ecedula" id="n172" placeholder="Ingrese# su Cedula" onkeyup="validarCedula()">
                 <span id="mensajeCedula" ></span><br>
-                <input class="botones" type="submit" value="Eliminar" onclick="validarCampos()">
+                <input class="botones3" type="submit" value="Eliminar" onclick="validarCampos()">
             </form>
         </div>
 
         <!--EDITAR USUARIOS-->
         <div id="margenCF4" style="display: none;">
-            <form class="formulario" name="formulario_registro4" method="POST" action="/Practica04-Mi-Agenda-Telefonica/admin/controladores/editarUser.php">
-                <input class="controles" type="text" name="editarCedula" id="n81" placeholder="Ingrese# su Cedula" onkeyup="validarCedula()">
+            <form class="formulario4" name="formulario_registro4" method="POST" action="/Practica04-Mi-Agenda-Telefonica/admin/controladores/editarUser.php">
+                <input class="controles4" type="text" name="editarCedula" id="n81" placeholder="Ingrese# su Cedula" onkeyup="validarCedula()">
                 <span id="mensajeCedula" ></span><br>
-                <input class="botones" type="submit" value="Buscar" onclick="validarCampos()">
+                <input class="botones4" type="submit" value="Buscar" onclick="validarCampos()">
             </form>
         </div>
 
         <!--BUSCAR USUARIOS-->
         <div id="margenCF5" style="display: none;">
-            <form class="formulario" name="formulario_registro4" method="POST" action="/Practica04-Mi-Agenda-Telefonica/admin/controladores/buscar.php">
-                <input class="controles" type="text" name="BuscarCedula" id="n82" placeholder="Ingrese# su Cedula" onkeyup="validarCedula()">
+            <form class="formulario5" name="formulario_registro4" method="POST" action="/Practica04-Mi-Agenda-Telefonica/admin/controladores/buscar.php">
+                <input class="controles5" type="text" name="BuscarCedula" id="n82" placeholder="Ingrese# su Cedula" onkeyup="validarCedula()">
                 <span id="mensajeCedula" ></span><br>
-                <input class="botones" type="submit" value="Buscar" onclick="validarCampos()">
+                <input class="botones5" type="submit" value="Buscar" onclick="validarCampos()">
             </form>
         </div>
+
+        <!--LISTAR USUARIOS-->
 
         
 
