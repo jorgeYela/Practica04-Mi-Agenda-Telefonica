@@ -3,7 +3,7 @@
     include '../../../config/conexioBD.php';
 
     $salida = "";
-    $query = "SELECT * FROM usuario ORDER BY usu_codigo";
+    $query = "SELECT * FROM usuario, telefono WHERE telefono.tel_fk_usuario = usuario.usu_codigo ORDER BY usu_codigo";
 
     if(isset($_POST['consulta'])) {
         $q = $conn->real_escape_string($_POST['consulta']);
@@ -24,6 +24,7 @@
                             <td>Apellidos</td>
                             <td>Direccion</td>
                             <td>Correo</td>
+                            <td>Numero</td>
                         </tr>
                     </thead>
                     <tbody>";
@@ -36,6 +37,7 @@
                         <td>" .$fila['usu_apellidos']."</td>
                         <td>" .$fila['usu_direccion']."</td>
                         <td>" .$fila['usu_correo']."</td>
+                        <td>" .$fila['tel_numero']."</td>
                     </tr>";
         }
 
