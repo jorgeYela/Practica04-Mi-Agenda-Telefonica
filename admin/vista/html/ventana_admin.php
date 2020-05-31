@@ -81,7 +81,7 @@
                 <input class="controles2" type="text" name="Ucorreo" id="n51" placeholder="Ingrese su Correo" onkeyup="validarCorreo()">
                 <span id="mensajecorreo" ></span><br>
     
-                <input class="controles2" type="password" name="Upsw" id="n16" placeholder="Ingrese su Contrasena" onkeyup="validarContrasena()">
+                <input class="controles2" type="password" name="Upsw" id="n167" placeholder="Ingrese su Contrasena" onkeyup="validarContrasena()">
                 <span id="mensajepsw" ></span><br>
     
                 <input class="botones2"  type="submit" value="Registrar" onclick="validarCampos()">
