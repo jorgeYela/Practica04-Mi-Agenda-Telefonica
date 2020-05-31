@@ -17,13 +17,11 @@
         <?php
 
             include '../../../config/conexioBD.php';
+            
             $v1 = $_GET['codigo'];
             
             $sql = "SELECT * FROM usuario WHERE usu_codigo='$v1'";
 
-            $usuario = isset($_POST["usuario69"]) ? trim($_POST["usuario69"]) : null;
-
-            $sql = "SELECT * FROM usuario";
             $result = $conn->query($sql);
 
             if($result->num_rows > 0) {
