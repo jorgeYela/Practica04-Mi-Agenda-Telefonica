@@ -117,8 +117,10 @@
 
         <!--Recuperar-->
         <div id="margenCF7" style="display: none;">
-            <form class="formulario7" name="formulario_registro7" method="POST" action="/Practica04-Mi-Agenda-Telefonica/admin/controladores/restablecerContra.php">
-                <input class="controles7" type="text" name="restablecerContra" id="n824" placeholder="Ingrese Numero de Cedula" onkeyup="validarCedula()">
+            <form class="formulario7" name="formulario_registro7" method="POST" action="/Practica04-Mi-Agenda-Telefonica/admin/controladores/recuperarContra.php">
+                <input class="controles7" type="text" name="restablecerCedula" id="n824" placeholder="Ingrese Numero de Cedula" onkeyup="validarCedula()">
+                <span id="mensajeCedula" ></span><br>
+                <input class="controles7" type="password" name="restablecerContrasena" id="n824" placeholder="Ingrese nueva Contrasena" onkeyup="validarCedula()">
                 <span id="mensajeCedula" ></span><br>
                 <input class="botones7" type="submit" value="Reestablecer" onclick="validarCampos()">
             </form>

@@ -52,7 +52,7 @@
 
 #menu #fotoAdmin {
     margin: 5%;
-    background: darkgrey;
+    
     width: 90%;
     height: 27%;
 }
@@ -299,7 +299,7 @@
 
 #margenCF7 .formulario7{
     width: 300px;
-    height: 155px;
+    height: 195px;
     background: rgb(15, 51, 103);
     padding: 10px;
     border-radius: 4px;
