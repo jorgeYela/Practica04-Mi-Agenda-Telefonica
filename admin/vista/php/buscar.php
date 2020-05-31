@@ -3,12 +3,13 @@
     include '../../../config/conexioBD.php';
 
     $salida = "";
-    $query = "SELECT * FROM usuario ORDER BY usu_codigo";
+    $query = "SELECT * FROM usuario, telefono WHERE telefono.tel_fk_usuario = usuario.usu_codigo ORDER BY usu_codigo";
 
     if(isset($_POST['consulta'])) {
         $q = $conn->real_escape_string($_POST['consulta']);
-        $query = "SELECT usu_codigo, usu_cedula, usu_nombres, usu_apellidos, usu_direccion, usu_correo FROM usuario
-        WHERE usu_nombres LIKE '%" .$q. "%' OR usu_cedula LIKE '%" .$q. "%'";
+        $query = "SELECT usuario.usu_codigo, usuario.usu_cedula, usuario.usu_nombres, usuario.usu_apellidos, usuario.usu_direccion, usuario.usu_correo, telefono.tel_numero
+                  FROM usuario, telefono
+                  WHERE telefono.tel_fk_usuario = usuario.usu_codigo AND usu_nombres LIKE '%" .$q. "%' OR usu_cedula LIKE '%" .$q. "%'";
     }
 
     $resultado = $conn->query($query);
@@ -24,6 +25,7 @@
                             <td>Apellidos</td>
                             <td>Direccion</td>
                             <td>Correo</td>
+                            <td>Numero</td>
                         </tr>
                     </thead>
                     <tbody>";
@@ -36,6 +38,7 @@
                         <td>" .$fila['usu_apellidos']."</td>
                         <td>" .$fila['usu_direccion']."</td>
                         <td>" .$fila['usu_correo']."</td>
+                        <td>" .$fila['tel_numero']."</td>
                     </tr>";
         }
 
