@@ -3,6 +3,7 @@
 <head>
  <meta charset="UTF-8">
  <title>Eliminar datos de persona</title>
+ 
 </head>
 <body>
  <?php
@@ -16,7 +17,7 @@
 
  while($row = $result->fetch_assoc()) {
  ?>
- <form id="formulario01" method="POST" action="../../admin/vista/html/ventana_admin.php">
+ <form class="registro" method="POST" action="../../admin/vista/html/ventana_admin.php">
  <label for="codigo">Codigo (*)</label>
  <input type="text" id="codigo" name="codigo" value="<?php echo $row["usu_codigo"]; ?>" disabled/>
  <br>
