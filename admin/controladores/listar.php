@@ -2,12 +2,13 @@
 <html>
 <head>
  <meta charset="UTF-8">
+ <link rel="stylesheet" href="/Practica04-Mi-Agenda-Telefonica/admin/vista/css/tabla.css" type="text/css" />
  <script src="/Practica04-Mi-Agenda-Telefonica/admin/vista/JS/ventana_admin.js"></script>
  <title>Gestión de usuarios</title>
 </head>
-<body>
+<body id="main-container">
 
- <table style="width:100%">
+ <table >
     <tr>
         <th>Cedula</th>
         <th>Nombres</th>
@@ -41,6 +42,6 @@
     $conn->close();
     ?>
  </table>
- <input type="submit" id="botones" name="agregarA" value="Aceptar" onclick="redirigirPrincipal()"/>
+ <input type="submit" id="boton" name="agregarA" value="Aceptar" onclick="redirigirPrincipal()"/>
 </body>
 </html>

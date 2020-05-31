@@ -4,22 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/ventana_admin.css" type="text/css" />
+
+    <link rel="stylesheet" href="/Practica04-Mi-Agenda-Telefonica/admin/vista/css/formulario.css" type="text/css">
     <script src="../JS/ventana_admin.js"></script>
-    <link rel="stylesheet" href="/Practica04-Mi-Agenda-Telefonica/admin/vista/css/formulario.css">
+    
     <title>Admin</title>
 </head>
 
 <body id="contenedor"> 
     <section id="cabecera">
-        <p>LOGO</p>
+    <img id="fotoCabecera" src="/Practica04-Mi-Agenda-Telefonica/admin/vista/imagenes/principal1.jpg" alt="">
+    <a id="salida" href="/Practica04-Mi-Agenda-Telefonica/public/vista/html/index.html">Cerrar Sesion</a>
     </section>
   
     <section id="menu">
         <div id="fotoAdmin">
-            <p>LOGO</p>
+        <img class="fotoAdmin" src="/Practica04-Mi-Agenda-Telefonica/admin/vista/imagenes/admin.png" alt="">
         </div>
+
         <div id="margen">
-            <p>NOMBRE ADMIN</p>
+            <p>CUENTA ADMINISTRATIVA</p>
         </div>
 
         <div id="margen">
