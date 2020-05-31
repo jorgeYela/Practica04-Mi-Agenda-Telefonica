@@ -19,6 +19,7 @@
 
             $_SESSION['isLogged'] = TRUE;
             echo "<p>Muy Bien</p>";
+            $mcodif = $row["usu_codigo"] ;
             echo $row["usu_cedula"] ;
             echo $row['usu_nombres'] ;
             echo $row['usu_apellidos'];
@@ -29,7 +30,8 @@
             if($tipouser === 'A'){
                header("Location: ../../admin/vista/html/ventana_admin.php");
             }else{
-                header("Location: ../../public/vista/html/index.html");
+                //echo 'window.location.href="../../admin/vista/usuario/index.php/?codigo=$mcodif"';
+                header("Location: ../../admin/vista/usuario/index.php/?codigo=$mcodif");
             }
         }
     } else {

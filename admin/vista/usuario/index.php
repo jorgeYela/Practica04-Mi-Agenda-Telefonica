@@ -17,8 +17,9 @@
         <?php
 
             include '../../../config/conexioBD.php';
-
-            $sql = "SELECT * FROM usuario";
+            $v1 = $_GET['codigo'];
+            
+            $sql = "SELECT * FROM usuario WHERE usu_codigo='$v1'";
             $result = $conn->query($sql);
 
             if($result->num_rows > 0) {
