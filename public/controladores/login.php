@@ -4,10 +4,10 @@
 
     include '../../config/conexioBD.php';
 
-    $usuario = isset($_POST["usuario"]) ? trim($_POST["usuario"]) : null;
-    $contrasena = isset($_POST["contrasena"]) ? trim($_POST["contrasena"]) : null;
+    $usuario = isset($_POST["usuario69"]) ? trim($_POST["usuario69"]) : null;
+    $contrasena = isset($_POST["contrasena69"]) ? trim($_POST["contrasena69"]) : null;
 
-    $sql = "SELECT * FROM usuario WHERE usu_correo = 'yelajorge@gmail.com' and usu_contrasena = MD5('$contrasena')";
+    $sql = "SELECT * FROM usuario WHERE usu_correo = '$usuario' and usu_contrasena = MD5('$contrasena')";
 
     $result = $conn->query($sql);
 
