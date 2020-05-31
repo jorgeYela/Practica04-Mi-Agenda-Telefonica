@@ -20,10 +20,10 @@
     <section class="registro">
         <form id="formulario" method="POST" action="../../admin/controladores/eliminar.php">
         <label for="codigo">Codigo</label>
-        <input type="text" class="controles" name="codigocedula" value="<?php echo $row["usu_codigo"]; ?>" disabled/>
+        <input type="text" class="controles" name="codigo" value="<?php echo $row["usu_codigo"]; ?>"/>
         <br>
         <label for="cedula">Cedula</label>
-        <input type="text" class="controles" name="cedula" value="<?php echo $row["usu_cedula"]; ?>"
+        <input type="text" class="controles" name="cedulacodigo" value="<?php echo $row["usu_cedula"]; ?>"
         disabled/>
         <br>
         <label for="nombres">Nombres</label>
