@@ -27,13 +27,13 @@
         </div>
 
         <div id="margen">
-            <input type="submit" id="botones" name="agregarA" value="Agregar Administrador" onclick="aparecer1()"/>
-            <input type="submit" id="botones" name="agregarU" value="Agregar Usuario" onclick="aparecer2()"/>
-            <input type="submit" id="botones" name="eliminar" value="Eliminar Usuario/Admin" onclick="aparecer3()"/>
-            <input type="submit" id="botones" name="modificar" value="Modificar Usuario/Admin" onclick="aparecer4()"/>
-            <input type="submit" id="botones" name="buscar" value="Buscar Usuario" onclick="aparecer5()"/>
-            <input type="submit" id="botones" name="listar" value="Listar Usuarios" onclick="aparecer6()"/>
-            <input type="submit" id="botones" name="cambiarContrasena" value="Recuperar Contrasena" onclick="aparecer7()"/>
+            <input type="submit" id="botones" name="agregarA" value="Agregar Administrador" onclick="myFunction('margenCF1')"/>
+            <input type="submit" id="botones" name="agregarU" value="Agregar Usuario" onclick="myFunction('margenCF2')"/>
+            <input type="submit" id="botones" name="eliminar" value="Eliminar Usuario/Admin" onclick="myFunction('margenCF3')"/>
+            <input type="submit" id="botones" name="modificar" value="Modificar Usuario/Admin" onclick="myFunction('margenCF4')"/>
+            <input type="submit" id="botones" name="buscar" value="Buscar Usuario" onclick="myFunction('margenCF5')"/>
+            <input type="submit" id="botones" name="listar" value="Listar Usuarios" onclick="myFunction('margenCF6')"/>
+            <input type="submit" id="botones" name="cambiarContrasena" value="Recuperar Contrasena" onclick="myFunction('margenCF7')"/>
         </div>
 
     </section>
@@ -115,7 +115,14 @@
             </form>
         </div>
 
-        <!--LISTAR USUARIOS-->
+        <!--Recuperar-->
+        <div id="margenCF7" style="display: none;">
+            <form class="formulario7" name="formulario_registro7" method="POST" action="/Practica04-Mi-Agenda-Telefonica/admin/controladores/restablecerContra.php">
+                <input class="controles7" type="text" name="restablecerContra" id="n824" placeholder="Ingrese Numero de Cedula" onkeyup="validarCedula()">
+                <span id="mensajeCedula" ></span><br>
+                <input class="botones7" type="submit" value="Reestablecer" onclick="validarCampos()">
+            </form>
+        </div>
 
         
 
