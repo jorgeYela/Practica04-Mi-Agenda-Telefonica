@@ -1,3 +1,6 @@
+#contenedor4{
+  overflow-y: scroll;
+}
 table.tabla_datos {
     border: 1px solid #1C6EA4;
     background-color: #EEEEEE;
