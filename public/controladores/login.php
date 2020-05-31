@@ -26,12 +26,15 @@
             echo $row['usu_direccion'] ;
             echo $row['usu_correo'];
             $tipouser=$row['usu_tipo_usuario'];
-            //header("Location: ../../admin/vista/usuario/index.php");
             if($tipouser === 'A'){
                header("Location: ../../admin/vista/html/ventana_admin.php");
             }else{
+<<<<<<< HEAD
                 //echo 'window.location.href="../../admin/vista/usuario/index.php/?codigo=$mcodif"';
                 header("Location: ../../admin/vista/usuario/index.php/?codigo=$mcodif");
+=======
+                header("Location: ../../admin/vista/usuario/index.php");
+>>>>>>> origin/master
             }
         }
     } else {
