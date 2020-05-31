@@ -1,4 +1,5 @@
 <?php
+
     session_start();
 
     include '../../config/conexioBD.php';
@@ -6,7 +7,7 @@
     $usuario = isset($_POST["usuario"]) ? trim($_POST["usuario"]) : null;
     $contrasena = isset($_POST["contrasena"]) ? trim($_POST["contrasena"]) : null;
 
-    $sql = "SELECT * FROM usuario WHERE usu_correo = '$usuario' and usu_password = MD5('$contrasena')";
+    $sql = "SELECT * FROM usuario WHERE usu_correo = 'yelajorge@gmail.com' and usu_contrasena = MD5('$contrasena')";
 
     $result = $conn->query($sql);
 
