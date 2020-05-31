@@ -108,7 +108,7 @@
 
         <!--BUSCAR USUARIOS-->
         <div id="margenCF5" style="display: none;">
-            <form class="formulario5" name="formulario_registro4" method="POST" action="/Practica04-Mi-Agenda-Telefonica/admin/controladores/buscar.php">
+            <form class="formulario5" name="formulario_registro4" method="POST" action="/Practica04-Mi-Agenda-Telefonica/admin/controladores/buscarUsuario.php">
                 <input class="controles5" type="text" name="BuscarCedula" id="n82" placeholder="Ingrese# su Cedula" onkeyup="validarCedula()">
                 <span id="mensajeCedula" ></span><br>
                 <input class="botones5" type="submit" value="Buscar" onclick="validarCampos()">
