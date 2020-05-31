@@ -2,7 +2,8 @@
     //incluir conexión a la base de datos
     include '../../config/conexioBD.php';
 
-    $cedula =  isset($_POST["codigo"]) ? trim($_POST["codigo"]) : null;
+    $cedula =  isset($_POST["codigocedula"]) ? trim($_POST["codigocedula"]) : null;
+    echo $cedula."ksksksk";
     $sql = "DELETE  FROM usuario WHERE usu_cedula LIKE '%" .$cedula. "%'";
     if ($conn->query($sql) === TRUE) {
         echo '<script language="javascript">alert("Usuario Eliminado Exitosamente"); window.location.href="../../admin/vista/html/ventana_admin.php"</script>';

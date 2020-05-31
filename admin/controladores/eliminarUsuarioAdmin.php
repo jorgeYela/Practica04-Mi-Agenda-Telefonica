@@ -3,6 +3,7 @@
 <head>
  <meta charset="UTF-8">
  <title>Eliminar datos de persona</title>
+ <link rel="stylesheet" href="/Practica04-Mi-Agenda-Telefonica/admin/vista/css/formulario.css">
 </head>
 <body>
  <?php
@@ -16,34 +17,36 @@
 
  while($row = $result->fetch_assoc()) {
  ?>
- <form id="formulario01" method="POST" action="../../admin/controladores/eliminar.php">
- <label for="codigo">Codigo (*)</label>
- <input type="text" id="codigo" name="codigo" value="<?php echo $row["usu_codigo"]; ?>" disabled/>
- <br>
- <label for="cedula">Cedula (*)</label>
- <input type="text" id="cedula" name="cedula" value="<?php echo $row["usu_cedula"]; ?>"
-disabled/>
- <br>
- <label for="nombres">Nombres (*)</label>
- <input type="text" id="nombres" name="nombres" value="<?php echo $row["usu_nombres"];
-?>" disabled/>
- <br>
- <label for="apellidos">Apelidos (*)</label>
- <input type="text" id="apellidos" name="apellidos" value="<?php echo $row["usu_apellidos"];
-?>" disabled/>
- <br>
- <label for="direccion">Dirección (*)</label>
- <input type="text" id="direccion" name="direccion" value="<?php echo $row["usu_direccion"];
-?>" disabled/>
- <br>
- <label for="correo">Correo electrónico (*)</label>
- <input type="email" id="correo" name="correo" value="<?php echo $row["usu_correo"]; ?>"
-disabled/>
- <br>
+    <section class="registro">
+        <form id="formulario" method="POST" action="../../admin/controladores/eliminar.php">
+        <label for="codigo">Codigo</label>
+        <input type="text" class="controles" name="codigocedula" value="<?php echo $row["usu_codigo"]; ?>" disabled/>
+        <br>
+        <label for="cedula">Cedula</label>
+        <input type="text" class="controles" name="cedula" value="<?php echo $row["usu_cedula"]; ?>"
+        disabled/>
+        <br>
+        <label for="nombres">Nombres</label>
+        <input type="text" class="controles" name="nombres" value="<?php echo $row["usu_nombres"];
+        ?>" disabled/>
+        <br>
+        <label for="apellidos">Apelidos</label>
+        <input type="text" class="controles" name="apellidos" value="<?php echo $row["usu_apellidos"];
+        ?>" disabled/>
+        <br>
+        <label for="direccion">Dirección</label>
+        <input type="text" class="controles" name="direccion" value="<?php echo $row["usu_direccion"];
+        ?>" disabled/>
+        <br>
+        <label for="correo">Correo electrónico</label>
+        <input type="email" class="controles" name="correo" value="<?php echo $row["usu_correo"]; ?>"
+        disabled/>
+        <br>
 
- <input type="submit" id="eliminar" name="eliminar" value="Eliminar" />
- <input type="reset" id="cancelar" name="cancelar" value="Cancelar" />
- </form>
+        <input type="submit" class="botones" name="eliminar" value="Eliminar" />
+        <input type="reset" class="botones" name="cancelar" value="Cancelar" />
+        </form>
+    </section>
  <?php
  }
  } else {
