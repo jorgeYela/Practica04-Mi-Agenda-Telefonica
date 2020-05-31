@@ -2,20 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>LOGIN</title>
+    <title>Login</title>
 </head>
 <body>
     <form id="formularioLogin" method="POST" action="../../controladores/login.php" autocomplete="off">
+        <h1 id="titulo1">Formulario</h1>
 
-        <h1>INGRESA TUS CREDENCIALES</h1>
+        <label id="lblUsuario" for="usuario">Usuario</label>
+        <input type="text" autocomplete="off" id="usuario" name="usuario" value="" placeholder="Ingrese el correo..."/><br>
+        <span id="mensajeUsuario" class="error"></span><br>
 
-        <label id="lblUserLogin" for="usuario">Usuario</label>
-        <input type="text" autocomplete="off" id="usuario" name="usuario" value="" placeholder="Ingrese su correo..." /><br>
-        <span id="avisoUserLogin" class="error"></span><br>
-
-        <label id="lblPasswordLogin" for="contrasena">Contraseña</label>
-        <input type="text" autocomplete="off" id="contrasena" name="contrasena" value="" placeholder="Ingrese su contraseña..." /><br>
-        <span id="avisoPasswordLogin" class="error"></span><br>
+        <label id="lblContrasena" for="contrasena">Contraseña(*)</label>
+        <input type="password" autocomplete="off" id="contrasena" name="contrasena" value="" placeholder="Ingrese la contraseña..."/><br>
+        <span id="mensajeContrasena" class="error"></span><br>
 
         <input type="submit" id="login" name="login" value="Iniciar Sesion" />
 
