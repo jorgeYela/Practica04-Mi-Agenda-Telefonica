@@ -7,6 +7,8 @@
     $usuario = isset($_POST["usuario69"]) ? trim($_POST["usuario69"]) : null;
     $contrasena = isset($_POST["contrasena69"]) ? trim($_POST["contrasena69"]) : null;
     $contra = md5($contrasena);
+    echo $usuario;
+    echo $contrasena;
     $sql = "SELECT * FROM usuario WHERE usu_correo LIKE '%" .$usuario. "%' AND usu_contrasena LIKE '%" .$contra. "%'";
 
     $result = $conn->query($sql);
