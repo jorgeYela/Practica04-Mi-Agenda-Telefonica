@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/Practica04-Mi-Agenda-Telefonica/admin/vista/css/formulario.css" type="text/css">
     <script src="../JS/ventana_admin.js"></script>
     
-    <title>Admin</title>
+    <title>Administrador</title>
 </head>
 
 <body id="contenedor"> 
