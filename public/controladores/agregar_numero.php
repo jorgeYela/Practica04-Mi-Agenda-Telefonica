@@ -36,7 +36,7 @@
 
                 echo "<p>El numero se ha creado exitosamente !!!</p>";
     
-                header("Location: ../controladores/login.php");
+                header("Location: /Practica04-Mi-Agenda-Telefonica/public/vista/html/index.html");
     
             }
 
