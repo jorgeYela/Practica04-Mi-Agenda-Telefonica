@@ -31,10 +31,7 @@
                 header("Location: ../../admin/vista/html/ventana_admin.php");
                 
             }else{
-                //echo 'window.location.href="../../admin/vista/usuario/index.php/?codigo=$mcodif"';
-                $_SESSION['isLogged'] = TRUE;
                 header("Location: ../../admin/vista/usuario/index.php/?codigo=$mcodif");
-                //header("Location: ../../admin/vista/usuario/index.php");
             }
         }
     } else {

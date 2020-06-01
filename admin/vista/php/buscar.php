@@ -26,6 +26,8 @@
                             <td>Direccion</td>
                             <td>Correo</td>
                             <td>Numero</td>
+                            <td>Llamar</td>
+                            <td>Mensajear</td>
                         </tr>
                     </thead>
                     <tbody>";
@@ -39,6 +41,8 @@
                         <td>" .$fila['usu_direccion']."</td>
                         <td>" .$fila['usu_correo']."</td>
                         <td>" .$fila['tel_numero']."</td>
+                        <td> <a href='tel:+593".$fila['tel_numero']."'>".$fila['tel_numero']."</td>
+                        <td> <a href='mailto:".$fila['usu_correo']."'>".$fila['usu_correo']."</td>
                     </tr>";
         }
 
