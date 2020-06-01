@@ -20,6 +20,7 @@
         <?php
 
             include '../../../config/conexioBD.php';
+            //include '/Practica04-Mi-Agenda-Telefonica/config/conexionBD.php';
 
             $v1 = $_GET['codigo'];
             
@@ -43,12 +44,13 @@
                     echo " <td> <a href='/Practica04-Mi-Agenda-Telefonica/admin/vista/usuario/modificar.php?codigo=" .$row['usu_codigo'] . "'>Modificar</a> </td>";
                     echo " <td> <a href='/Practica04-Mi-Agenda-Telefonica/admin/vista/usuario/cambiarContrasena.php?codigo=" .$row['usu_codigo'] . "'>Cambiar Contraseña</a> </td>";
                     echo "</tr>";
+                    //include '../../../public/controladores/agregar_numero.php';
 
                     ?>
 
                     <section class="registro" >
                         
-                        <form  class="formulario" name="formulario_registro_telefono"  method="GET" action = "../../../public/controladores/agregar_numero.php">
+                        <form  class="formulario" name="formulario_registro_telefono"  method="GET" action = "/Practica04-Mi-Agenda-Telefonica/public/controladores/agregar_numero.php">
                             
                             <input class="controles" type="text" name="cedula" id="cedula" value="<?php echo $row["usu_cedula"]; ?>" >
                             <span id="mensajeCedula" ></span><br>

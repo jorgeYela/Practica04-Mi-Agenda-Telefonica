@@ -9,7 +9,7 @@
         $q = $conn->real_escape_string($_POST['consulta']);
         $query = "SELECT *
                   FROM usuario, telefono
-                  WHERE usu_nombres LIKE '%" .$q. "%' AND telefono.tel_fk_usuario = usuario.usu_codigo OR usu_cedula LIKE '%" .$q. "%' AND telefono.tel_fk_usuario = usuario.usu_codigo";
+                  WHERE usu_correo LIKE '%" .$q. "%' AND telefono.tel_fk_usuario = usuario.usu_codigo OR usu_cedula LIKE '%" .$q. "%' AND telefono.tel_fk_usuario = usuario.usu_codigo";
     }
 
     $resultado = $conn->query($query);
@@ -50,7 +50,7 @@
 
     } else {
 
-        $salida.="No hay datos :(";
+        $salida.="No existen datos con tales especificaciones :(";
 
     }
 
