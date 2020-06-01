@@ -28,6 +28,7 @@
 
                 while($row = $result->fetch_assoc()) {
 
+                    $cedulavrg = $row["usu_cedula"];
                     echo "<tr>";
                     echo " <td>" .$row["usu_cedula"] . "</td>";
                     echo " <td>" .$row["usu_nombres"] . "</td>";
@@ -37,28 +38,27 @@
                     echo " <td>" .$row["tel_numero"] . "</td>";
                     echo " <td> <a href='/Practica04-Mi-Agenda-Telefonica/admin/vista/usuario/eliminar.php?codigo=" .$row['usu_codigo'] . "'>Eliminar</a> </td>";
                     echo " <td> <a href='/Practica04-Mi-Agenda-Telefonica/admin/vista/usuario/modificar.php?codigo=" .$row['usu_codigo'] . "'>Modificar</a> </td>";
-                    echo " <td> <a href='cambiar_contrasena.php?codigo=" .$row['usu_codigo'] . "'>Cambiar Contraseña</a> </td>";
                     echo "</tr>";
 
                     ?>
 
                     <section class="registroNewTelf" >
-                            <h2>Agrega un nuevo numero a tu registro...</h2>
-                            <form  class="formulario" name="formulario_registro_telefono"  method="GET" action = "/Practica04-Mi-Agenda-Telefonica/public/controladores/agregar_numero.php">
-                                
-                                <input class="controles" type="text" name="cedula" id="cedula" value="<?php echo $row["usu_cedula"]; ?>" >
-                                <span id="mensajeCedula" ></span><br>
+                        <h2>Agrega un nuevo numero a tu registro...</h2>
+                        <form  class="formulario" name="formulario_registro_telefono"  method="GET" action = "../../../public/controladores/agregar_numero.php">
                             
-                                <input class="controles" type="text" name="numero" id="numero" placeholder="Ingrese su numero celular..." >
-                                <span id="mensajeNumero" ></span><br>
+                            <input class="controles" type="text" name="cedula" id="cedula" value="<?php echo $row["usu_cedula"]; ?>" >
+                            <span id="mensajeCedula" ></span><br>
+                        
+                            <input class="controles" type="text" name="numero" id="numero" placeholder="Ingrese su numero celular..." >
+                            <span id="mensajeNumero" ></span><br>
 
-                                <input class="controles" type="text" name="operadora" id="operadora" placeholder="Ingrese su operadora" >
-                                <span id="mensajeOperadora" ></span><br>
+                            <input class="controles" type="text" name="operadora" id="operadora" placeholder="Ingrese su operadora" >
+                            <span id="mensajeNuevo" ></span><br>
 
-                                <input class="botones" type="submit" value="Registrar" >
-                            </form>
+                            <input class="botones" type="submit" value="Registrar" >
+                        </form>
 
-                        </section>
+                    </section>
 
                     <?php
 
