@@ -31,7 +31,7 @@
             }else{
                 //echo 'window.location.href="../../admin/vista/usuario/index.php/?codigo=$mcodif"';
                 header("Location: ../../admin/vista/usuario/index.php/?codigo=$mcodif");
-                header("Location: ../../admin/vista/usuario/index.php");
+                //header("Location: ../../admin/vista/usuario/index.php");
             }
         }
     } else {

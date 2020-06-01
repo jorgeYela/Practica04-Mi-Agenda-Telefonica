@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>USUARIO LOGEADO</title>
+    <link rel="stylesheet" href="/Practica04-Mi-Agenda-Telefonica/admin/vista/css/formulario.css">
+    <link rel="stylesheet" href="/Practica04-Mi-Agenda-Telefonica/admin/vista/css/tabla.css" type="text/css" />
 </head>
 <body>
-    <table style="width:100%">
+    <table id="main-container">
         <tr>
             <th>Cedula</th>
             <th>Nombres</th>
@@ -42,17 +44,17 @@
 
                     ?>
 
-                    <section class="registroNewTelf" >
-                        <h2>Agrega un nuevo numero a tu registro...</h2>
+                    <section class="registro" >
+                        
                         <form  class="formulario" name="formulario_registro_telefono"  method="GET" action = "../../../public/controladores/agregar_numero.php">
                             
                             <input class="controles" type="text" name="cedula" id="cedula" value="<?php echo $row["usu_cedula"]; ?>" >
                             <span id="mensajeCedula" ></span><br>
                         
-                            <input class="controles" type="text" name="numero" id="numero" placeholder="Ingrese su numero celular..." >
+                            <input class="controles" type="text" name="numero" id="numero" placeholder="Ingrese su nuevo N.Telefonico" >
                             <span id="mensajeNumero" ></span><br>
 
-                            <input class="controles" type="text" name="operadora" id="operadora" placeholder="Ingrese su operadora" >
+                            <input class="controles" type="text" name="operadora" id="operadora" placeholder="Ingrese su Operadora" >
                             <span id="mensajeNuevo" ></span><br>
 
                             <input class="botones" type="submit" value="Registrar" >
