@@ -12,15 +12,15 @@
             <th>Apellidos</th>
             <th>Direccion</th>
             <th>Correo</th>
-            <!--<th>Telefono</th>-->
+            <th>Telefono</th>
         </tr>
         <?php
 
             include '../../../config/conexioBD.php';
-            
+
             $v1 = $_GET['codigo'];
             
-            $sql = "SELECT * FROM usuario WHERE usu_codigo='$v1'";
+            $sql = "SELECT * FROM usuario, telefono WHERE usu_codigo='$v1' AND usuario.usu_codigo = telefono.tel_fk_usuario";
 
             $result = $conn->query($sql);
 
@@ -34,7 +34,7 @@
                     echo " <td>" .$row["usu_apellidos"] . "</td>";
                     echo " <td>" .$row["usu_direccion"] . "</td>";
                     echo " <td>" .$row["usu_correo"] . "</td>";
-                    //echo " <td>" .$row["tel_numero"] . "</td>";
+                    echo " <td>" .$row["tel_numero"] . "</td>";
                     echo " <td> <a href='eliminar.php?codigo=" .$row['usu_codigo'] . "'>Eliminar</a> </td>";
                     echo " <td> <a href='modificar.php?codigo=" .$row['usu_codigo'] . "'>Modificar</a> </td>";
                     echo " <td> <a href='cambiar_contrasena.php?codigo=" .$row['usu_codigo'] . "'>Cambiar Contraseña</a> </td>";
