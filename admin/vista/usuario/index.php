@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/Practica04-Mi-Agenda-Telefonica/admin/vista/css/tabla.css" type="text/css" />
 </head>
 <body>
+    <header><a href="/Practica04-Mi-Agenda-Telefonica/public/vista/html/index.html"><p>Cerrar Sesion</p></a></header>
     <table id="main-container">
         <tr>
             <th>Cedula</th>
@@ -79,6 +80,6 @@
 
         ?>
     </table>
-    
+
 </body>
 </html>
