@@ -27,7 +27,9 @@
             echo $row['usu_correo'];
             $tipouser=$row['usu_tipo_usuario'];
             if($tipouser === 'A'){
-               header("Location: ../../admin/vista/html/ventana_admin.php");
+                $_SESSION['isLogged'] = TRUE;
+                header("Location: ../../admin/vista/html/ventana_admin.php");
+                
             }else{
                 header("Location: ../../admin/vista/usuario/index.php/?codigo=$mcodif");
             }

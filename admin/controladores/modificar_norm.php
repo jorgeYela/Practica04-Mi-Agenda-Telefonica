@@ -6,6 +6,12 @@
 </head>
 <body>
     <?php
+        
+        session_start();
+        if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE){
+        header("Location: /Practica04-Mi-Agenda-Telefonica/public/vista/html/index.html");
+        }
+    
 
         include '../../config/conexioBD.php';
 
