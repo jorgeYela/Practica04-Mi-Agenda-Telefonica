@@ -30,7 +30,15 @@
 
             $sql1 = "INSERT INTO telefono VALUES (0, '$numero', '$operadora', $newCode)";
 
-            $result1 = $conn->query($sql1);
+            //$result1 = $conn->query($sql1);
+
+            if ($conn->query($sql1) === TRUE) {
+
+                echo "<p>El numero se ha creado exitosamente !!!</p>";
+    
+                header("Location: ../controladores/login.php");
+    
+            }
 
         }
 
