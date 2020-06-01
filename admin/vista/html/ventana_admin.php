@@ -12,9 +12,15 @@
 </head>
 
 <body id="contenedor"> 
+    <?php
+        session_start();
+        if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE){
+        header("Location: /Practica04-Mi-Agenda-Telefonica/public/vista/html/index.html");
+        }
+    ?>
     <section id="cabecera">
     <img id="fotoCabecera" src="/Practica04-Mi-Agenda-Telefonica/admin/vista/imagenes/banner_guia.png" alt="">
-    <a id="salida" href="/Practica04-Mi-Agenda-Telefonica/public/vista/html/index.html">Cerrar Sesion</a>
+    <a id="salida" href="/Practica04-Mi-Agenda-Telefonica/admin/controladores/cerrarSesion.php">Cerrar Sesion</a>
     </section>
   
     <section id="menu">

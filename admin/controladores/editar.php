@@ -1,6 +1,14 @@
 <?php
     //incluir conexión a la base de datos
+
+    
+        session_start();
+        if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE){
+        header("Location: /Practica04-Mi-Agenda-Telefonica/public/vista/html/index.html");
+        }
+    
     include '../../config/conexioBD.php';
+
 
     $codigo =  isset($_POST["codigoEditar"]) ? trim($_POST["codigoEditar"]) : null;
     $cedula =  isset($_POST["cedulaEditar"]) ? trim($_POST["cedulaEditar"]) : null;

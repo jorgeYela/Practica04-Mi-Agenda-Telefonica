@@ -7,6 +7,12 @@
 </head>
 <body>
  <?php
+ 
+ session_start();
+ if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE){
+ header("Location: /Practica04-Mi-Agenda-Telefonica/public/vista/html/index.html");
+ }
+
 
  $cedula =  isset($_POST["BuscarCedula"]) ? trim($_POST["BuscarCedula"]) : null;
  $sql = "SELECT * FROM usuario where usu_cedula LIKE '%" .$cedula. "%'";
