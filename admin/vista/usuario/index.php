@@ -40,6 +40,7 @@
                     echo " <td>" .$row["tel_numero"] . "</td>";
                     echo " <td> <a href='/Practica04-Mi-Agenda-Telefonica/admin/vista/usuario/eliminar.php?codigo=" .$row['usu_codigo'] . "'>Eliminar</a> </td>";
                     echo " <td> <a href='/Practica04-Mi-Agenda-Telefonica/admin/vista/usuario/modificar.php?codigo=" .$row['usu_codigo'] . "'>Modificar</a> </td>";
+                    echo " <td> <a href='/Practica04-Mi-Agenda-Telefonica/admin/vista/usuario/cambiarContrasena.php?codigo=" .$row['usu_codigo'] . "'>Cambiar Contraseña</a> </td>";
                     echo "</tr>";
 
                     ?>
