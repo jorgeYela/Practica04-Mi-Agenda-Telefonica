@@ -13,13 +13,13 @@
 
 <body id="contenedor"> 
     <section id="cabecera">
-    <img id="fotoCabecera" src="/Practica04-Mi-Agenda-Telefonica/admin/vista/imagenes/principal.jpeg" alt="">
+    <img id="fotoCabecera" src="/Practica04-Mi-Agenda-Telefonica/admin/vista/imagenes/banner_guia.png" alt="">
     <a id="salida" href="/Practica04-Mi-Agenda-Telefonica/public/vista/html/index.html">Cerrar Sesion</a>
     </section>
   
     <section id="menu">
         <div id="fotoAdmin">
-        <img class="fotoAdmin" src="/Practica04-Mi-Agenda-Telefonica/admin/vista/imagenes/pc.png" alt="">
+        <img class="fotoAdmin" src="/Practica04-Mi-Agenda-Telefonica/admin/vista/imagenes/comp.png" alt="">
         </div>
 
         <div id="margen">
