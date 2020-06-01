@@ -30,8 +30,6 @@
 
             echo "<p>Se ha creado los datos personales correctamemte!!!</p>";
 
-            header("Location: ../controladores/agregar_numero.php/?cedula=$cedula");
-
             header("Location: ../controladores/agregar_numero.php?cedula=$cedula&numero=$numero&operadora=$operadora");
 
         } else {
